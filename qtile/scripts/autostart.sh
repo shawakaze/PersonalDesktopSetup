@@ -10,12 +10,12 @@ function run {
 
 
 #starting utility applications at boot time
-lxsession &
+#lxsession &
 run nm-applet &
 run pamac-tray &
 numlockx on &
 #blueman-applet &
-#flameshot &
+run flameshot &
 #picom --config $HOME/.config/picom/picom.conf &
 picom --config .config/picom/picom-blur.conf --experimental-backends &
 #/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
@@ -28,7 +28,8 @@ run volumeicon &
 nitrogen --restore &
 #run caffeine -a &
 #run vivaldi-stable &
-#run firefox &
+run firefox &
+run thunderbird &
 #run thunar &
 run dropbox &
 run mpd &
