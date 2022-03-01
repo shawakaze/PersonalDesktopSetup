@@ -61,13 +61,13 @@ keys = [
 
 group_names = [(fa.icons['terminal'], {'layout': 'monadtall','matches':[Match(wm_class=["urxvt","URxvt"])]}),
                (fa.icons['firefox'], {'layout': 'max','matches':[Match(wm_class=["firefox","Chromium"])]}),
+               (fa.icons['google-plus'], {'layout': 'monadtall','matches':[Match(wm_class=["Thunderbird"])]}),
                (fa.icons['book'], {'layout': 'max','matches':[Match(wm_class=["TeXstudio","Texmaker"])]}),
                (fa.icons['file-pdf'], {'layout': 'max','matches':[Match(wm_class=["Evince"])]}),
                (fa.icons['film'], {'layout': 'monadtall','matches':[Match(wm_class=["vlc","smplayer"])]}), 
-               (fa.icons['cogs'], {'layout': 'max','matches':[Match(wm_class=["Code"])]}),
                (fa.icons['eye'], {'layout': 'monadtall'}),
                (fa.icons['opera'], {'layout': 'max','matches':[Match(wm_class=["Opera"])]}),
-	       (fa.icons['gamepad'], {'layout':'max','matches':[Match(wm_class=["Steam","0ad"])]})
+	       (fa.icons['gamepad'], {'layout':'monadtall','matches':[Match(wm_class=["Steam","0ad"])]})
                 ]
 
 groups = [Group(name, **kwargs) for name, kwargs in group_names]
@@ -88,7 +88,7 @@ monadtall_theme = dict(
         )
 
 layouts = [
-    #layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
+    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
@@ -116,7 +116,6 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                #widget.CurrentLayout(),
                 widget.GroupBox(font = 'Font Awesome 5 Free', 
                     fontsize = 15, 
                     padding_x = 5,padding_y = 3, 
@@ -134,27 +133,19 @@ screens = [
                 widget.Spacer(length = 15),
                 widget.NvidiaSensors(foreground = volt, fmt = 'GPU Temp : {}', update_interval = 2),
                 widget.Spacer(length = 20),
-                #widget.WindowName(),
-                #widget.Chord(
-                #    chords_colors={
-                #        "launch": ("#ff0000", "#ffffff"),
-                #    },
-                #    name_transform=lambda name: name.upper(),
-                #),
-                #widget.TextBox("default config", name="default"),
-                #widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
+                ####
                 widget.OpenWeather(foreground = volt, app_key = '3bbca9935bdd06f3a56f955c4a70fba1',cityid = '909137', padding = 5),
                 widget.Spacer(length = 5),
-                widget.Net(interface = 'enp0s20u2' , prefix = 'k', format = fa.icons['angle-double-down']+"{down}/s", update_interval = 1, foreground = volt),
-                widget.NetGraph(interface = 'enp0s20u2', bandwidth_type = 'down', graph_color = 'ceff00', start_pos = 'bottom', frequency = 1, border_color = bg_kala, border_width = 1),
+                widget.Net(prefix = 'k', format = fa.icons['angle-double-down']+"{down}/s", update_interval = 1, foreground = volt),
+                #widget.NetGraph(interface = 'enp0s20u2', bandwidth_type = 'down', graph_color = 'ceff00', start_pos = 'bottom', frequency = 1, border_color = bg_kala, border_width = 1),
                 widget.Spacer(),
                 widget.Systray(),
                 widget.Clock(format="%a %H:%M", foreground = volt),
-                #widget.QuickExit(),
+                
             ],
-            30, opacity=0.9
+            30, opacity=0.9,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
+            # border_color= "ceff00" #["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
     ),
 ]
