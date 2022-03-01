@@ -61,7 +61,7 @@ keys = [
 
 group_names = [(fa.icons['terminal'], {'layout': 'monadtall','matches':[Match(wm_class=["urxvt","URxvt"])]}),
                (fa.icons['firefox'], {'layout': 'max','matches':[Match(wm_class=["firefox","Chromium"])]}),
-               (fa.icons['google-plus'], {'layout': 'monadtall','matches':[Match(wm_class=["Thunderbird"])]}),
+               (fa.icons['mailchimp'], {'layout': 'monadtall','matches':[Match(wm_class=["Thunderbird"])]}),
                (fa.icons['book'], {'layout': 'max','matches':[Match(wm_class=["TeXstudio","Texmaker"])]}),
                (fa.icons['file-pdf'], {'layout': 'max','matches':[Match(wm_class=["Evince"])]}),
                (fa.icons['film'], {'layout': 'monadtall','matches':[Match(wm_class=["vlc","smplayer"])]}), 
