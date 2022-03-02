@@ -10,12 +10,13 @@ function run {
 
 
 #starting utility applications at boot time
-#lxsession &
+lxsession &
 run nm-applet &
 run pamac-tray &
+#run pasystray &
 numlockx on &
 #blueman-applet &
-run flameshot &
+#run flameshot &
 #picom --config $HOME/.config/picom/picom.conf &
 picom --config .config/picom/picom-blur.conf --experimental-backends &
 #/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
