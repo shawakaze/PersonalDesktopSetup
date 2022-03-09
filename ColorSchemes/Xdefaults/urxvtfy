@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-sed 's/*.col/urxvt.col/' $1 > temp
+sed 's/*col/urxvt.col/' $1 > temp
 mv temp $1
 
 
