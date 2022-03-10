@@ -29,11 +29,12 @@ run volumeicon &
 nitrogen --restore &
 #run caffeine -a &
 #run vivaldi-stable &
-(sleep 10 && run firefox )&
-(sleep 15 && run thunderbird )&
+(sleep 5 &&  run firefox) &
+(sleep 10 && run thunderbird) &
 #run thunar &
-(sleep 20 && run dropbox )&
-(sleep 5 && run mpd )&
+(sleep 15 && run dropbox) &
+(sleep 2 && run mpd) &
+(sleep 30 && run vlc)&
 #run insync start &
 #run spotify &
 #run atom &
