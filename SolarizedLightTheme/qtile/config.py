@@ -64,7 +64,7 @@ group_names = [(fa.icons['terminal'], {'layout': 'monadtall','matches':[Match(wm
                (fa.icons['mailchimp'], {'layout': 'monadtall','matches':[Match(wm_class=["Thunderbird"])]}),
                (fa.icons['book'], {'layout': 'max','matches':[Match(wm_class=["TeXstudio","Texmaker"])]}),
                (fa.icons['file-pdf'], {'layout': 'max','matches':[Match(wm_class=["Evince"])]}),
-               (fa.icons['film'], {'layout': 'monadtall','matches':[Match(wm_class=["vlc","smplayer"])]}), 
+               (fa.icons['film'], {'layout': 'monadtall','matches':[Match(wm_class=["vlc","smplayer","mplayer"])]}), 
                (fa.icons['eye'], {'layout': 'monadtall'}),
                (fa.icons['opera'], {'layout': 'max','matches':[Match(wm_class=["Opera"])]}),
 	       (fa.icons['gamepad'], {'layout':'monadtall','matches':[Match(wm_class=["Steam","0ad"])]})
@@ -148,7 +148,7 @@ screens = [
                 widget.Spacer(length = 5),
                 widget.Prompt(background = bg_kala, foreground = volt, prompt = 'open: '),
                 widget.Spacer(length = 20),
-                widget.Mpd2(foreground = volt, host = '127.0.0.1', port = 6601, status_format = ' {play_status} {artist} - {title}', update_interval = 1),
+                widget.Mpd2(foreground = volt, host = '127.0.0.1', port = 6601, status_format = ' {play_status} {artist} - {title}', update_interval = 1, color_progress = '#859900'),
 #                widget.Spacer(length = 15),
 #                widget.NvidiaSensors(foreground = volt, fmt = 'GPU Temp : {}', update_interval = 2),
                 widget.Spacer(length = 20),
