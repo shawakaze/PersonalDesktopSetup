@@ -17,8 +17,8 @@ run pamac-tray &
 numlockx on &
 #blueman-applet &
 #run flameshot &
-#picom --config $HOME/.config/picom/picom.conf &
-picom --config .config/picom/picom-blur.conf --experimental-backends &
+picom --config $HOME/.config/picom/picom.conf &
+#picom --config .config/picom/picom-blur.conf --experimental-backends &
 #/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 dunst &
 #feh --randomize --bg-fill /usr/share/wallpapers/garuda-wallpapers/*
@@ -29,12 +29,12 @@ run volumeicon &
 nitrogen --restore &
 #run caffeine -a &
 #run vivaldi-stable &
-(sleep 5 &&  run firefox) &
-(sleep 10 && run thunderbird) &
+#(sleep 5 &&  run firefox) &
+#(sleep 10 && run thunderbird) &
 #run thunar &
 (sleep 15 && run dropbox) &
 (sleep 2 && run mpd) &
-(sleep 30 && run vlc)&
+#(sleep 30 && run vlc)&
 #run insync start &
 #run spotify &
 #run atom &
