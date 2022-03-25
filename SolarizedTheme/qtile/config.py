@@ -76,27 +76,11 @@ for i, (name, kwargs) in enumerate(group_names, 1):
     keys.append(Key([mod], str(i), lazy.group[name].toscreen()))        # Switch to another group
     keys.append(Key([mod, "shift"], str(i), lazy.window.togroup(name))) # Send current window to another group
 ##################################################################################################################
-########################## original green volt ######################################
-#fg_kala = '#ffffff'
-#bg_kala = '#071d22'
-#volt = '#ceff00'
 
-#################### Nyomi color scheme ##############
-#fg_kala = '#755f59'
-#bg_kala = '#ffffff'
-#volt = '#ac886d'
-#######################################################
-
-################ solarized light ######################
-#bg_kala = '#fdf6e3'
-#fg_kala = '#839496'
-#volt = '#0e0d15'
-########################################################
-
-################# solarized with volt #################
+################# solarized #################
 bg_kala = '#002b36'
 fg_kala = '#839496'
-volt = '#ceff00'
+volt = '#859900'
 ####################################################
 
 monadtall_theme = dict(
@@ -107,7 +91,7 @@ monadtall_theme = dict(
         )
 
 layouts = [
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
+    layout.Columns(border_focus_stack=["#859900", "#2aa198"], border_width=4),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
