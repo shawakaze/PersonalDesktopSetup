@@ -65,34 +65,34 @@ urxvt.pointerColor:     red
 ! X11 colors pieced together by Dmitry Medvinsky.
 ! Based on Vim colorscheme "badwolf" pieced together by Steve Losh.
 
-urxvt.background: #1c1b1a
-urxvt.foreground: #f8f6f2
-urxvt.cursorColor: #aeee00
+urxvt.background: #040904
+urxvt.foreground: #048004
+urxvt.cursorColor: #044b04
 urxvt.scrollColor: #45413b
-urxvt.fadeColor: #ffffff
-urxvt.fading: 20
+!urxvt.fadeColor: #ffffff
+!urxvt.fading: 20
 
 ! black
-urxvt.color0: #141413
-urxvt.color8: #000000
+urxvt.color0: #0d0208
+urxvt.color8: #0d0208
 ! red
-urxvt.color1: #ff2c4b
-urxvt.color9: #ff2c4b
+urxvt.color1: #003b00
+urxvt.color9: #003b00
 ! green
-urxvt.color2: #aeee00
-urxvt.color10: #aeee00
+urxvt.color2: #008f11
+urxvt.color10: #008f11
 ! yellow
-urxvt.color3: #fade3e
-urxvt.color11: #ffa724
+urxvt.color3: #003b00
+urxvt.color11: #003b00
 ! blue
-urxvt.color4: #0a9dff
-urxvt.color12: #0a9dff
+urxvt.color4: #008f11
+urxvt.color12: #008f11
 ! magenta
-urxvt.color5: #ff9eb8
-urxvt.color13: #ff9eb8
+urxvt.color5: #003b00
+urxvt.color13: #003b00
 ! cyan
-urxvt.color6: #8cffba
-urxvt.color14: #8cffba
+urxvt.color6: #008f11
+urxvt.color14: #008f11
 ! white
-urxvt.color7: #d9cec3
-urxvt.color15: #ffffff
+urxvt.color7: #00ff41
+urxvt.color15: #00ff41
