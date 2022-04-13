@@ -47,13 +47,13 @@ urxvt.iso14755_52: false
 !-------------------------------------------------------------------------------------
 
 urxvt.depth:	32
-!urxvt.transparent: true
+urxvt.transparent: true
 urxvt.dynamicColors: on
-!urxvt.shading:	190
+urxvt.shading:	130
 !urxvt.fading:	40 ! The font is what fades
 !*tintColor:	#11332e !! green tint
-!*tintColor:	#080b0f
-!urxvt.blurRadius:	10
+urxvt.tintColor:	#fdf6e3
+urxvt.blurRadius:	10
 urxvt.inheritPixmap:	true
 urxvt.borderLess:       false
 urxvt.borderColor:      #fdf6e3

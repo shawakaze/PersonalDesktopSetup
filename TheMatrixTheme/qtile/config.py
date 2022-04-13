@@ -107,8 +107,8 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font = 'ProFontWindows Nerd Font',
-    fontsize=15,
+    font = 'OCRA',
+    fontsize=12,
     padding=10,
     background = bg_kala,
     foreground = fg_kala

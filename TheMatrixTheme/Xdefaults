@@ -66,7 +66,7 @@ urxvt.pointerColor:     red
 ! Based on Vim colorscheme "badwolf" pieced together by Steve Losh.
 
 urxvt.background: #040904
-urxvt.foreground: #048004
+urxvt.foreground: #00ff41
 urxvt.cursorColor: #044b04
 urxvt.scrollColor: #45413b
 !urxvt.fadeColor: #ffffff
