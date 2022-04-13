@@ -73,8 +73,8 @@ urxvt.scrollColor: #45413b
 !urxvt.fading: 20
 
 ! black
-urxvt.color0: #0d0208
-urxvt.color8: #0d0208
+urxvt.color0: #040904
+urxvt.color8: #040904
 ! red
 urxvt.color1: #003b00
 urxvt.color9: #003b00
