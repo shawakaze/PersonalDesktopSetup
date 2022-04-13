@@ -80,7 +80,7 @@ for i, (name, kwargs) in enumerate(group_names, 1):
 ################# The Matrix #################
 bg_kala = '#040904'
 fg_kala = '#044b04'
-volt = '#048004'
+volt = '#00ff41'
 ####################################################
 
 monadtall_theme = dict(
