@@ -47,18 +47,21 @@ urxvt.iso14755_52: false
 !-------------------------------------------------------------------------------------
 
 urxvt.depth:	32
+urxvt.buffered: on
 urxvt.transparent: true
 urxvt.dynamicColors: on
-urxvt.shading:	170
-!urxvt.fading:	40 ! The font is what fades
-!*tintColor:	#11332e !! green tint
-!*tintColor:	#080b0f
-!urxvt.blurRadius:	10
+urxvt.shading:	50
+urxvt.fading:	40 
+urxvt.fadeColor: #1c1b1a
+!urxvt.tintColor:	#1c1b1a
+urxvt.blurRadius:	10
+
 urxvt.inheritPixmap:	true
 urxvt.borderLess:       false
 urxvt.borderColor:      black
-urxvt.underlineColor:   yellow
+urxvt.underlineColor:   #fade3e
 urxvt.pointerColor:     red
+urxvt.highlightColor: #1c1b1a
 
 ! Insert color theme after here
 
