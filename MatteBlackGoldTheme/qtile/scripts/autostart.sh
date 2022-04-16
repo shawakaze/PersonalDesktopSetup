@@ -22,6 +22,7 @@ picom --config .config/picom/picom-blur.conf --experimental-backends &
 #/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 dunst &
 #feh --randomize --bg-fill /usr/share/wallpapers/garuda-wallpapers/*
+
 #starting user applications at boot time
 run volumeicon &
 #run discord &
@@ -29,8 +30,8 @@ run volumeicon &
 nitrogen --restore &
 #run caffeine -a &
 #run vivaldi-stable &
-run firefox &
-run thunderbird &
+#run firefox &
+#run thunderbird &
 #run thunar &
 run dropbox &
 run mpd &
