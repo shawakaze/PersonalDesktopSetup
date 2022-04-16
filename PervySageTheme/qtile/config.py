@@ -75,13 +75,9 @@ groups = [Group(name, **kwargs) for name, kwargs in group_names]
 for i, (name, kwargs) in enumerate(group_names, 1):
     keys.append(Key([mod], str(i), lazy.group[name].toscreen()))        # Switch to another group
     keys.append(Key([mod, "shift"], str(i), lazy.window.togroup(name))) # Send current window to another group
-##################################################################################################################
-########################## original green volt ######################################
-#fg_kala = '#ffffff'
-#bg_kala = '#071d22'
-#volt = '#ceff00'
+#________________________________________________________________________________________________________________
 
-#################### Nyomi color scheme ##############
+#______________________Nyomi color scheme___________________________
 fg_kala = '#755f59'
 bg_kala = '#ffffff'
 volt = '#ac886d'
@@ -111,7 +107,7 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font = 'ProFontWindows Nerd Font',
+    font = 'Iosevka Nerd Font Mono',
     fontsize=15,
     padding=10,
     background = bg_kala,
