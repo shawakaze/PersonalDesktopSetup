@@ -61,7 +61,7 @@ keys = [
 
 group_names = [(fa.icons['terminal'], {'layout': 'monadtall','matches':[Match(wm_class=["urxvt","URxvt"])]}),
                (fa.icons['firefox'], {'layout': 'max','matches':[Match(wm_class=["firefox","Chromium"])]}),
-               (fa.icons['mailchimp'], {'layout': 'monadtall','matches':[Match(wm_class=["Thunderbird"])]}),
+               (fa.icons['mail-bulk'], {'layout': 'monadtall','matches':[Match(wm_class=["Thunderbird"])]}),
                (fa.icons['book'], {'layout': 'max','matches':[Match(wm_class=["TeXstudio","Texmaker"])]}),
                (fa.icons['file-pdf'], {'layout': 'max','matches':[Match(wm_class=["Evince"])]}),
                (fa.icons['film'], {'layout': 'monadtall','matches':[Match(wm_class=["vlc","smplayer"])]}), 
@@ -105,7 +105,7 @@ layouts = [
 
 widget_defaults = dict(
     font = 'Iosevka Nerd Font Mono',
-    fontsize=15,
+    fontsize=17,
     padding=10,
     background = bg_kala,
     foreground = fg_kala
@@ -117,7 +117,7 @@ screens = [
         top=bar.Bar(
             [
                 widget.GroupBox(font = 'Font Awesome 5 Free', 
-                    fontsize = 15, 
+                    fontsize = 30, 
                     padding_x = 5,padding_y = 3, 
                     margin_x = 3, 
                     borderwidth = 1, 
@@ -129,15 +129,16 @@ screens = [
                 widget.Spacer(length = 5),
                 widget.Prompt(background = bg_kala, foreground = volt, prompt = 'open: '),
                 widget.Spacer(length = 20),
-                widget.Mpd2(foreground = volt, host = '127.0.0.1', port = 6601, status_format = ' {play_status} {artist} - {title}', color_progress = bg_kala, update_interval = 1),
+                widget.Mpd2(foreground = volt, host = 'localhost', port = 6600, status_format = ' {play_status} {artist} - {title}', color_progress = bg_kala, update_interval = 1),
                 widget.Spacer(length = 15),
-                widget.NvidiaSensors(foreground = volt, fmt = 'GPU Temp : {}', update_interval = 2),
+                #widget.NvidiaSensors(foreground = volt, fmt = 'GPU Temp : {}', update_interval = 2),
                 widget.Spacer(length = 20),
                 ####
                 widget.OpenWeather(foreground = volt, app_key = '3bbca9935bdd06f3a56f955c4a70fba1',cityid = '909137', padding = 5),
                 widget.Spacer(length = 5),
                 widget.Net(prefix = 'k', format = fa.icons['angle-double-down']+"{down}/s", update_interval = 1, foreground = volt),
                 #widget.NetGraph(interface = 'enp0s20u2', bandwidth_type = 'down', graph_color = 'ceff00', start_pos = 'bottom', frequency = 1, border_color = bg_kala, border_width = 1),
+                widget.Wlan(interface='wlp2s0',format='{essid}{percent:2.0%}'),
                 widget.Spacer(),
                 widget.Systray(),
                 widget.Clock(format="%a %H:%M", foreground = volt),

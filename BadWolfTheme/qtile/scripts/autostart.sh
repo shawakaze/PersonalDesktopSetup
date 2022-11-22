@@ -17,8 +17,7 @@ run pamac-tray &
 numlockx on &
 #blueman-applet &
 #run flameshot &
-picom --config $HOME/.config/picom/picom.conf &
-#picom --config .config/picom/picom-blur.conf --experimental-backends &
+#picom --config $HOME/.config/picom/picom.conf &
 #/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 dunst &
 #feh --randomize --bg-fill /usr/share/wallpapers/garuda-wallpapers/*
