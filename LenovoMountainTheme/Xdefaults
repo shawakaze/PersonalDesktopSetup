@@ -59,9 +59,42 @@ urxvt.blurRadius:	10
 urxvt.inheritPixmap:	true
 urxvt.borderLess:       false
 urxvt.borderColor:      black
-urxvt.underlineColor:   #fade3e
+urxvt.underlineColor:   yellow
 urxvt.pointerColor:     red
-urxvt.highlightColor: #1c1b1a
 
 ! Insert color theme after here
 
+! X11 colors pieced together by Dmitry Medvinsky.
+! Based on Vim colorscheme "badwolf" pieced together by Steve Losh.
+
+urxvt.background: #1c1b1a
+urxvt.foreground: #f8f6f2
+urxvt.cursorColor: #aeee00
+urxvt.scrollColor: #45413b
+urxvt.fadeColor: #ffffff
+urxvt.fading: 20
+
+! black
+urxvt.color0: #141413
+urxvt.color8: #000000
+! red
+urxvt.color1: #ff2c4b
+urxvt.color9: #ff2c4b
+! green
+urxvt.color2: #aeee00
+urxvt.color10: #aeee00
+! yellow
+urxvt.color3: #fade3e
+urxvt.color11: #ffa724
+! blue
+urxvt.color4: #0a9dff
+urxvt.color12: #0a9dff
+! magenta
+urxvt.color5: #ff9eb8
+urxvt.color13: #ff9eb8
+! cyan
+urxvt.color6: #8cffba
+urxvt.color14: #8cffba
+! white
+urxvt.color7: #d9cec3
+urxvt.color15: #ffffff

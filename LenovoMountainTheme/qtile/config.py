@@ -61,13 +61,13 @@ keys = [
 
 group_names = [(fa.icons['terminal'], {'layout': 'monadtall','matches':[Match(wm_class=["urxvt","URxvt"])]}),
                (fa.icons['firefox'], {'layout': 'max','matches':[Match(wm_class=["firefox","Chromium"])]}),
-               (fa.icons['mail-bulk'], {'layout': 'monadtall','matches':[Match(wm_class=["Thunderbird"])]}),
+               (fa.icons['mail-bulk'], {'layout': 'monadtall','matches':[Match(wm_class=["thunderbird"])]}),
                (fa.icons['book'], {'layout': 'max','matches':[Match(wm_class=["TeXstudio","Texmaker"])]}),
                (fa.icons['file-pdf'], {'layout': 'max','matches':[Match(wm_class=["Evince"])]}),
                (fa.icons['film'], {'layout': 'monadtall','matches':[Match(wm_class=["vlc","smplayer"])]}), 
                (fa.icons['eye'], {'layout': 'monadtall'}),
                (fa.icons['opera'], {'layout': 'max','matches':[Match(wm_class=["Opera"])]}),
-	       (fa.icons['gamepad'], {'layout':'monadtall','matches':[Match(wm_class=["Steam","0ad"])]})
+	           (fa.icons['gamepad'], {'layout':'monadtall','matches':[Match(wm_class=["Steam","0ad"])]})
                 ]
 
 groups = [Group(name, **kwargs) for name, kwargs in group_names]
@@ -75,10 +75,13 @@ groups = [Group(name, **kwargs) for name, kwargs in group_names]
 for i, (name, kwargs) in enumerate(group_names, 1):
     keys.append(Key([mod], str(i), lazy.group[name].toscreen()))        # Switch to another group
     keys.append(Key([mod, "shift"], str(i), lazy.window.togroup(name))) # Send current window to another group
+##################################################################################################################
 
-fg_kala = '#9bacaa'
-bg_kala = '#1d2020'
-volt = '#757575'
+################# bad wolf #################
+bg_kala = '#161616'
+fg_kala = '#8f9e9b'
+volt = '#a3b3b2'
+####################################################
 
 monadtall_theme = dict(
         border_focus = volt,
@@ -88,7 +91,7 @@ monadtall_theme = dict(
         )
 
 layouts = [
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
+    layout.Columns(border_focus_stack=["#859900", "#2aa198"], border_width=4),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
@@ -104,8 +107,8 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font = 'ProFontIIx Nerd Font',
-    fontsize=20,
+    font = 'Iosevka Nerd Font Mono',
+    fontsize=18,
     padding=10,
     background = bg_kala,
     foreground = fg_kala
@@ -116,7 +119,7 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.GroupBox(font = 'Font Awesome 5 Free', 
+                widget.GroupBox( 
                     fontsize = 30, 
                     padding_x = 5,padding_y = 3, 
                     margin_x = 3, 
@@ -124,26 +127,26 @@ screens = [
                     active = volt, 
                     rounded = False, 
                     this_current_screen_border = volt, 
-                    highlight_method = "line", highlight_color = bg_kala, 
-                    background = bg_kala),
+                    highlight_method = "line", highlight_color = bg_kala
+                                ),
                 widget.Spacer(length = 5),
                 widget.Prompt(background = bg_kala, foreground = volt, prompt = 'open: '),
                 widget.Spacer(length = 20),
-                widget.Mpd2(foreground = volt, host = 'localhost', port = 6600, status_format = ' {play_status} {artist} - {title}', color_progress = '81908d', update_interval = 1),
-                #widget.Spacer(length = 15),
-                #widget.NvidiaSensors(foreground = volt, fmt = 'GPU Temp : {}', update_interval = 2),
+                widget.Mpd2(foreground = volt, host = 'localhost', port = 6600, status_format = ' {play_status} {artist} - {title}', update_interval = 1),
                 widget.Spacer(length = 20),
                 ####
                 widget.OpenWeather(foreground = volt, app_key = '3bbca9935bdd06f3a56f955c4a70fba1',cityid = '909137', padding = 5),
                 widget.Spacer(length = 5),
+                widget.Wlan(interface='wlp2s0'),
                 widget.Net(prefix = 'k', format = fa.icons['angle-double-down']+"{down}/s", update_interval = 1, foreground = volt),
-                #widget.NetGraph(interface = 'enp0s20u2', bandwidth_type = 'down', graph_color = 'ceff00', start_pos = 'bottom', frequency = 1, border_color = bg_kala, border_width = 1),
                 widget.Spacer(),
+                #widget.BatteryIcon(theme_path='/home/muzo/.config/qtile/icons/battery_icons_horiz/',update_interval=30,scale=1),
+                widget.Battery(fontsize=20,format=fa.icons['battery-full']+'{percent:2.0%}'),
                 widget.Systray(),
                 widget.Clock(format="%a %H:%M", foreground = volt),
                 
             ],
-            size=35, 
+            size=30, 
             opacity=0.6,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color= "ceff00" #["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
