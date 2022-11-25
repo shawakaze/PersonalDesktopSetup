@@ -11,7 +11,7 @@ Xft*hinting:            full
 !*.font: xft:ProFont for Powerline:pixelsize=16
 urxvt.font: xft:ShureTechMono Nerd Font Mono:pixelsize=18
 !urxvt.font: xft:Monaco:pixelsize=12
-!*font: xft:Ubuntu Mono derivative Powerline:pixelsize=15
+!urxvt*font: xft:VictorMono Nerd Font Mono:pixelsize=18
 
 !--------------------------------------------------------------
 !		Scrollbar or the lack of it
