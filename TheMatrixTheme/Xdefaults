@@ -1,17 +1,14 @@
 !-------------------------------------------------------------------
-!			 urxvt fonts
+!			 urxvt Matrix Theme
 !-------------------------------------------------------------------
   
 Xft*dpi:                96
 Xft*antialias:          true
 Xft*hinting:            full
 
-!urxvt.font: xft:Hack:pixelsize=12 
-!*.font: xft:Iosevka Nerd Font Mono:pixelsize=15
-!*.font: xft:ProFont for Powerline:pixelsize=16
-!urxvt.font: xft:ShureTechMono Nerd Font Mono:pixelsize=15
-urxvt.font: xft:OCRA:pixelsize=14
-!*font: xft:Ubuntu Mono derivative Powerline:pixelsize=15
+! The font from The Matrix movies
+urxvt.font: xft:OCRA:pixelsize=18
+
 
 !--------------------------------------------------------------
 !		Scrollbar or the lack of it
