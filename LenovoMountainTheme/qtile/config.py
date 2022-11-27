@@ -140,13 +140,13 @@ screens = [
                 widget.Wlan(interface='wlp2s0'),
                 widget.Net(prefix = 'k', format = fa.icons['angle-double-down']+"{down}/s", update_interval = 1, foreground = volt),
                 widget.Spacer(),
-                #widget.BatteryIcon(theme_path='/home/muzo/.config/qtile/icons/battery_icons_horiz/',update_interval=30,scale=1),
+                widget.BatteryIcon(theme_path='/usr/lib/python3.10/site-packages/libqtile/resources/battery-icons',update_interval=30,scale=1),
                 widget.Battery(fontsize=20,format=fa.icons['battery-full']+'{percent:2.0%}'),
                 widget.Systray(),
                 widget.Clock(format="%a %H:%M", foreground = volt),
                 
             ],
-            size=30, 
+            size=35, 
             opacity=0.6,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color= "ceff00" #["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
