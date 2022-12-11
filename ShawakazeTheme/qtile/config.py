@@ -61,9 +61,9 @@ keys = [
 
 group_names = [(fa.icons['terminal'], {'layout': 'monadtall','matches':[Match(wm_class=["urxvt","URxvt"])]}),
                (fa.icons['firefox'], {'layout': 'max','matches':[Match(wm_class=["firefox","Chromium"])]}),
-               (fa.icons['mail-bulk'], {'layout': 'monadtall','matches':[Match(wm_class=["Thunderbird"])]}),
+               (fa.icons['mail-bulk'], {'layout': 'monadtall','matches':[Match(wm_class=["thunderbird"])]}),
                (fa.icons['book'], {'layout': 'max','matches':[Match(wm_class=["TeXstudio","Texmaker"])]}),
-               (fa.icons['file-pdf'], {'layout': 'max','matches':[Match(wm_class=["Evince"])]}),
+               (fa.icons['file-pdf'], {'layout': 'max','matches':[Match(wm_class=["Evince","Zathura","zathura"])]}),
                (fa.icons['film'], {'layout': 'monadtall','matches':[Match(wm_class=["vlc","smplayer"])]}), 
                (fa.icons['eye'], {'layout': 'monadtall'}),
                (fa.icons['opera'], {'layout': 'max','matches':[Match(wm_class=["Opera"])]}),
@@ -140,6 +140,13 @@ screens = [
                 #widget.NetGraph(interface = 'enp0s20u2', bandwidth_type = 'down', graph_color = 'ceff00', start_pos = 'bottom', frequency = 1, border_color = bg_kala, border_width = 1),
                 widget.Wlan(interface='wlp2s0',format='{essid}{percent:2.0%}'),
                 widget.Spacer(),
+                widget.CurrentLayoutIcon(
+                    custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")],
+                    foreground = fg_kala,
+                    background = bg_kala,
+                    scale = 0.7,
+                    padding = 5
+                ),
                 widget.Systray(),
                 widget.Clock(format="%a %H:%M", foreground = volt),
                 

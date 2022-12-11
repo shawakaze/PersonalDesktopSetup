@@ -67,7 +67,7 @@ group_names = [(fa.icons['terminal'], {'layout': 'monadtall','matches':[Match(wm
                (fa.icons['film'], {'layout': 'monadtall','matches':[Match(wm_class=["vlc","smplayer"])]}), 
                (fa.icons['eye'], {'layout': 'monadtall'}),
                (fa.icons['opera'], {'layout': 'max','matches':[Match(wm_class=["Opera"])]}),
-	       (fa.icons['gamepad'], {'layout':'monadtall','matches':[Match(wm_class=["Steam","0ad"])]})
+	           (fa.icons['gamepad'], {'layout':'monadtall','matches':[Match(wm_class=["Steam","0ad"])]})
                 ]
 
 groups = [Group(name, **kwargs) for name, kwargs in group_names]
@@ -75,13 +75,13 @@ groups = [Group(name, **kwargs) for name, kwargs in group_names]
 for i, (name, kwargs) in enumerate(group_names, 1):
     keys.append(Key([mod], str(i), lazy.group[name].toscreen()))        # Switch to another group
     keys.append(Key([mod, "shift"], str(i), lazy.window.togroup(name))) # Send current window to another group
-#________________________________________________________________________________________________________________
+##################################################################################################################
 
-#______________________Nyomi color scheme___________________________
-fg_kala = '#755f59'
-bg_kala = '#ffffff'
-volt = '#ac886d'
-#######################################################
+################# bad wolf #################
+bg_kala = '#1f2c47'
+fg_kala = '#dddee1'
+volt = '#fdfaea'
+####################################################
 
 monadtall_theme = dict(
         border_focus = volt,
@@ -91,7 +91,7 @@ monadtall_theme = dict(
         )
 
 layouts = [
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
+    layout.Columns(border_focus_stack=["#859900", "#2aa198"], border_width=4),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
@@ -119,7 +119,7 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.GroupBox(font = 'Font Awesome 5 Free', 
+                widget.GroupBox( 
                     fontsize = 30, 
                     padding_x = 5,padding_y = 3, 
                     margin_x = 3, 
@@ -127,17 +127,19 @@ screens = [
                     active = volt, 
                     rounded = False, 
                     this_current_screen_border = volt, 
-                    highlight_method = "line", highlight_color = bg_kala, 
-                    background = bg_kala),
+                    highlight_method = "line", highlight_color = bg_kala
+                                ),
                 widget.Spacer(length = 5),
                 widget.Prompt(background = bg_kala, foreground = volt, prompt = 'open: '),
                 widget.Spacer(length = 20),
-                widget.Mpd2(foreground = volt, host = 'localhost', port = 6600, status_format = ' {play_status} {artist} - {title}', update_interval = 1),
+                widget.Mpd2(foreground = fg_kala, host = 'localhost', port = 6600, status_format = ' {play_status} {artist} - {title}', update_interval = 1),
                 widget.Spacer(length = 20),
                 ####
                 widget.OpenWeather(foreground = volt, app_key = '3bbca9935bdd06f3a56f955c4a70fba1',cityid = '909137', padding = 5),
                 widget.Spacer(length = 5),
+                widget.Wlan(interface='wlp2s0'),
                 widget.Net(prefix = 'k', format = fa.icons['angle-double-down']+"{down}/s", update_interval = 1, foreground = volt),
+                widget.Spacer(length=20),
                 widget.Spacer(),
                 widget.CurrentLayoutIcon(
                     custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")],
@@ -145,12 +147,15 @@ screens = [
                     background = bg_kala,
                     scale = 0.7,
                     padding = 5
-                ),
+                    ),
+                #widget.Spacer(),
+                widget.BatteryIcon(theme_path='~/.config/qtile/icons/battery-icons',update_interval=30,scale=1),
+                widget.Battery(fontsize=20,format=fa.icons['battery-full']+'{percent:2.0%}'),
                 widget.Systray(),
                 widget.Clock(format="%a %H:%M", foreground = volt),
                 
             ],
-            size=30, 
+            size=35, 
             opacity=0.6,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color= "ceff00" #["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
