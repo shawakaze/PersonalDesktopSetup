@@ -6,7 +6,6 @@ Xft*dpi:                96
 Xft*antialias:          true
 Xft*hinting:            full
 
-
 !urxvt.font: xft:Hack:pixelsize=12 
 !*.font: xft:Iosevka Nerd Font Mono:pixelsize=15
 !*.font: xft:ProFont for Powerline:pixelsize=16
@@ -14,14 +13,13 @@ urxvt.font: xft:ShureTechMono Nerd Font Mono:pixelsize=18
 !urxvt.font: xft:Monaco:pixelsize=12
 !urxvt*font: xft:VictorMono Nerd Font Mono:pixelsize=18
 
-
 !--------------------------------------------------------------
 !		Scrollbar or the lack of it
 !--------------------------------------------------------------
 
 urxvt*scrollBar: false
 urxvt*scrollBar_right:  false
-urxvt*scrollstyle:	rxvt     
+urxvt*scrollstyle:	plain     
 urxvt*saveLines: 1000
 urxvt*scrollTtyOutput:      false
 urxvt*scrollWithBuffer:     true
@@ -49,59 +47,53 @@ urxvt.iso14755_52: false
 !-------------------------------------------------------------------------------------
 
 urxvt.depth:	32
+urxvt.buffered: on
 urxvt.transparent: true
 urxvt.dynamicColors: on
-urxvt.shading:	130
-!urxvt.fading:	40 ! The font is what fades
-!*tintColor:	#11332e !! green tint
-urxvt.tintColor:	#fdf6e3
+urxvt.shading:	20 
+urxvt.fadeColor: #1c1b1a
+!urxvt.tintColor:	#1c1b1a
 urxvt.blurRadius:	10
+
 urxvt.inheritPixmap:	true
 urxvt.borderLess:       false
-urxvt.borderColor:      #fdf6e3
+urxvt.borderColor:      black
 urxvt.underlineColor:   yellow
 urxvt.pointerColor:     red
 
 ! Insert color theme after here
 
-!!Source http://github.com/altercation/solarized
+! X11 colors pieced together by Dmitry Medvinsky.
+! Based on Vim colorscheme "badwolf" pieced together by Steve Losh.
 
-urxvt.background: #fdf6e3
-urxvt.foreground: #839496
+urxvt.background: #1c1b1a
+urxvt.foreground: #f8f6f2
+urxvt.cursorColor: #ad8095
+urxvt.scrollColor: #45413b
+urxvt.fadeColor: #000000
+urxvt.fading: 20
 
-urxvt.fadeColor: #fdf6e3
-urxvt.cursorColor: #586e75
-! urxvt.pointerColorBackground: #93a1a1
-urxvt.pointerColor: #586e75
-
-!! black dark/light
-urxvt.color0: #eee8d5
-urxvt.color8: #fdf6e3
-
-!! red dark/light
-urxvt.color1: #dc322f
-urxvt.color9: #cb4b16
-
-!! green dark/light
-urxvt.color2: #859900
-urxvt.color10: #93a1a1
-
-!! yellow dark/light
-urxvt.color3: #b58900
-urxvt.color11: #839496
-
-!! blue dark/light
-urxvt.color4: #268bd2
-urxvt.color12: #657b83
-
-!! magenta dark/light
-urxvt.color5: #d33682
-urxvt.color13: #6c71c4
-
-!! cyan dark/light
-urxvt.color6: #2aa198
-urxvt.color14: #586e75
-
-!! white dark/light
-urxvt.color7: #073642
-urxvt.color15: #002b36
+! black
+urxvt.color0: #141413
+urxvt.color8: #000000
+! red
+urxvt.color1: #ff2c4b
+urxvt.color9: #ff2c4b
+! green
+urxvt.color2: #aeee00
+urxvt.color10: #aeee00
+! yellow
+urxvt.color3: #fade3e
+urxvt.color11: #ffa724
+! blue
+urxvt.color4: #0a9dff
+urxvt.color12: #0a9dff
+! magenta
+urxvt.color5: #ff9eb8
+urxvt.color13: #ff9eb8
+! cyan
+urxvt.color6: #8cffba
+urxvt.color14: #8cffba
+! white
+urxvt.color7: #d9cec3
+urxvt.color15: #ffffff

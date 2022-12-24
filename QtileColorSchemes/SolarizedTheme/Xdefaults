@@ -6,12 +6,13 @@ Xft*dpi:                96
 Xft*antialias:          true
 Xft*hinting:            full
 
+
 !urxvt.font: xft:Hack:pixelsize=12 
 !*.font: xft:Iosevka Nerd Font Mono:pixelsize=15
 !*.font: xft:ProFont for Powerline:pixelsize=16
-urxvt.font: xft:ShureTechMono Nerd Font Mono:pixelsize=15
+urxvt.font: xft:ShureTechMono Nerd Font Mono:pixelsize=18
 !urxvt.font: xft:Monaco:pixelsize=12
-!*font: xft:Ubuntu Mono derivative Powerline:pixelsize=15
+!urxvt*font: xft:VictorMono Nerd Font Mono:pixelsize=18
 
 !--------------------------------------------------------------
 !		Scrollbar or the lack of it
