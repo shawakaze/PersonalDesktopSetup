@@ -1,0 +1,99 @@
+!-------------------------------------------------------------------
+!			 urxvt fonts
+!-------------------------------------------------------------------
+  
+Xft*dpi:                96
+Xft*antialias:          true
+Xft*hinting:            full
+
+
+!urxvt.font: xft:Hack:pixelsize=12 
+!*.font: xft:Iosevka Nerd Font Mono:pixelsize=15
+!*.font: xft:ProFont for Powerline:pixelsize=16
+urxvt.font: xft:ShureTechMono Nerd Font Mono:pixelsize=18
+!urxvt.font: xft:Monaco:pixelsize=12
+!urxvt*font: xft:VictorMono Nerd Font Mono:pixelsize=18
+
+!--------------------------------------------------------------
+!		Scrollbar or the lack of it
+!--------------------------------------------------------------
+
+urxvt*scrollBar: false
+urxvt*scrollBar_right:  false
+urxvt*scrollstyle:	rxvt     
+urxvt*saveLines: 1000
+urxvt*scrollTtyOutput:      false
+urxvt*scrollWithBuffer:     true
+urxvt*scrollTtyKeypress:    true
+
+
+!-----------------------------------------------------------------
+!		 Settings for perl extensions ;  see man urxvtperl
+!-----------------------------------------------------------------
+urxvt*perl-lib: /usr/lib/urxvt/perl
+urxvt*perl-ext: default
+urxvt*perl-ext-common: default,clipboard
+urxvt*url-launcher: firefox
+
+!Disables the insanely annoying Ctrl+Shift shortcut that enters ISO14755 mode
+urxvt.iso14755:    false
+urxvt.iso14755_52: false
+
+!----------------------------------------------------------------------------------
+! 			Colors and transparency
+!-----------------------------------------------------------------------------------
+!!   Dont do this: impossible to actually use (only if true, composite, tranparancy)
+!    *shading should be set to ||  0 is basically black, 99 is full transparency on the dark side
+!	    200 is basically white, 101 is full transparency on the light side 
+!-------------------------------------------------------------------------------------
+
+urxvt.depth:	32
+urxvt.transparent: true
+urxvt.dynamicColors: on
+urxvt.shading:	95
+!urxvt.fading:	40 ! The font is what fades
+!*tintColor:	#11332e !! green tint
+urxvt.tintColor:	#451cca
+urxvt.blurRadius:	10
+urxvt.inheritPixmap:	true
+urxvt.borderLess:       false
+urxvt.borderColor:      black
+urxvt.underlineColor:   yellow
+urxvt.pointerColor:     red
+
+! Insert color theme after here
+
+urxvt.background: #451cca
+urxvt.foreground: #839496
+
+!! black dark/light
+urxvt.color0: #073642
+urxvt.color8: #002b36
+
+!! red dark/light
+urxvt.color1: #dc322f
+urxvt.color9: #cb4b16
+
+!! green dark/light
+urxvt.color2: #859900
+urxvt.color10: #586e75
+
+!! yellow dark/light
+urxvt.color3: #b58900
+urxvt.color11: #657b83
+
+!! blue dark/light
+urxvt.color4: #268bd2
+urxvt.color12: #839496
+
+!! magenta dark/light
+urxvt.color5: #d33682
+urxvt.color13: #6c71c4
+
+!! cyan dark/light
+urxvt.color6: #2aa198
+urxvt.color14: #93a1a1
+
+!! white dark/light
+urxvt.color7: #eee8d5
+urxvt.color15: #fdf6e3

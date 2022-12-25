@@ -1,0 +1,31 @@
+sw_volume: 52
+audio_device_state:1:pulse audio
+audio_device_state:1:my_fifo
+state: play
+current: 3
+time: 111.926000
+random: 0
+repeat: 1
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:African/Afro House/Heavy K/Heavy-K - KHUSTA (Album)/01. Heavy-K - WeKhusta (feat. Csana).mp3
+1:African/Afro House/Heavy K/Heavy-K - KHUSTA (Album)/02. Heavy-K - Uyeke (feat. Natalia Mabaso).mp3
+2:African/Afro House/Heavy K/Heavy-K - KHUSTA (Album)/03. Heavy-K - Fela (feat. Njelic).mp3
+3:African/Afro House/Heavy K/Heavy-K - KHUSTA (Album)/04. Heavy-K - Sakho (feat. Nokwazi).mp3
+4:African/Afro House/Heavy K/Heavy-K - KHUSTA (Album)/05. Heavy-K - Imithandazo (feat. Zano).mp3
+5:African/Afro House/Heavy K/Heavy-K - KHUSTA (Album)/06. Heavy-K - Kumnandi (feat. Csana).mp3
+6:African/Afro House/Heavy K/Heavy-K - KHUSTA (Album)/07. Heavy-K - Wedwa (feat. Mpumi).mp3
+7:African/Afro House/Heavy K/Heavy-K - KHUSTA (Album)/08. Heavy-K - Tsamaya (feat. Professor).mp3
+8:African/Afro House/Heavy K/Heavy-K - KHUSTA (Album)/09. Heavy-K - Sele Sele (feat. Mr Luu & MSK).mp3
+9:African/Afro House/Heavy K/Heavy-K - KHUSTA (Album)/10. Heavy-K - Sondela (feat. Tresor & Msaki).mp3
+10:African/Afro House/Heavy K/Heavy-K - KHUSTA (Album)/11. Heavy-K - Nawe (feat. Soulstar).mp3
+11:African/Afro House/Heavy K/Heavy-K - KHUSTA (Album)/12. Heavy-K - Michael Knight.mp3
+12:African/Afro House/Heavy K/Heavy-K - KHUSTA (Album)/13. Heavy-K - iNdoda (feat. Fiesta Black & Big Zulu).mp3
+13:African/Afro House/Heavy K/Heavy-K - KHUSTA (Album)/14. Heavy-K - My Dali Yo! (feat. Jackpot & Prince).mp3
+14:African/Afro House/Heavy K/Heavy-K - KHUSTA (Album)/15. Heavy-K - A Prayer (feat. Natalia Mabaso).mp3
+15:African/Afro House/Heavy K/Heavy-K - KHUSTA (Album)/16. Heavy-K - Drip Drip (feat. Miano, Skhokho & Kooldrink).mp3
+playlist_end
