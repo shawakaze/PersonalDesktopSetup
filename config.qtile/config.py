@@ -60,16 +60,17 @@ keys = [
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
 ]
 
-group_names = [(fa.icons['terminal'], {'layout': 'monadtall','matches':[Match(wm_class=["urxvt","URxvt"])]}),
+group_names = [
+               (fa.icons['terminal'], {'layout': 'monadtall','matches':[Match(wm_class=["urxvt","URxvt"])]}),
+               (fa.icons['code'], {'layout':'max','matches':[Match(wm_class=["Spyder","spyder"])]}),
                (fa.icons['firefox'], {'layout': 'max','matches':[Match(wm_class=["firefox","Chromium"])]}),
                (fa.icons['mail-bulk'], {'layout': 'monadtall','matches':[Match(wm_class=["thunderbird"])]}),
                (fa.icons['book'], {'layout': 'max','matches':[Match(wm_class=["TeXstudio","Texmaker"])]}),
-               (fa.icons['file-pdf'], {'layout': 'max','matches':[Match(wm_class=["Evince","Zathura","zathura"])]}),
+               (fa.icons['file-pdf'], {'layout': 'max','matches':[Match(wm_class=["Evince","Zathura","zathura","Okular","okular"])]}),
                (fa.icons['film'], {'layout': 'monadtall','matches':[Match(wm_class=["vlc","smplayer"])]}), 
-               (fa.icons['eye'], {'layout': 'monadtall'}),
-               (fa.icons['opera'], {'layout': 'max','matches':[Match(wm_class=["Opera"])]}),
-	       (fa.icons['gamepad'], {'layout':'monadtall','matches':[Match(wm_class=["Steam","0ad"])]})
-                ]
+               (fa.icons['dice'], {'layout': 'monadtall'}),
+               (fa.icons['gamepad'], {'layout': 'monadtall','matches':[Match(wm_class=["Steam","steam"])]})
+	                       ]
 
 groups = [Group(name, **kwargs) for name, kwargs in group_names]
 
@@ -103,7 +104,8 @@ layouts = [
 
 widget_defaults = dict(
     font = 'Iosevka Nerd Font Mono',
-    fontsize=17,
+    #font='Font Awesome 6 Free Regular',
+    fontsize=18,
     padding=10,
     background = bg_kala,
     foreground = fg_kala
@@ -114,8 +116,9 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-                widget.GroupBox(font = 'Font Awesome 5 Free', 
-                    fontsize = 30, 
+                widget.GroupBox(
+                    font='Font Awesome 6 Free',
+                    fontsize=20,
                     padding_x = 5,padding_y = 3, 
                     margin_x = 3, 
                     borderwidth = 1, 
@@ -126,30 +129,30 @@ screens = [
                     highlight_color = bg_kala
                     ),
                 widget.Spacer(length = 5),
-                widget.Prompt(background = bg_kala, foreground = volt, prompt = 'exe: '),
+                widget.Prompt(font='Font Awesome 6 Free',fontsize=20,foreground = volt, prompt = fa.icons['frog']+' ' ),
                 widget.Spacer(length = 20),
-                widget.Mpd2(foreground = volt, host = 'localhost', port = 6600, status_format = ' {play_status} {artist} - {title}', update_interval = 1),
-                widget.Spacer(length = 20),
+                widget.Mpd2(foreground = volt, host = 'localhost', port = 6600, status_format = '{play_status} {title}', update_interval = 1),
+                #widget.PulseVolume(foreground = volt,fmt=fa.icons['volume-up']+'{}',update_interval=0.2),
                 widget.OpenWeather(foreground = volt, app_key = '3bbca9935bdd06f3a56f955c4a70fba1',cityid = '909137', padding = 5),
                 widget.Spacer(length = 5),
-                widget.Net(prefix = 'k', format = "DlSpd:"+"{down}/s", update_interval = 1, foreground = volt),
-                #widget.NetGraph(bandwidth_type = 'down', graph_color = volt, start_pos = 'bottom', frequency = 1, border_color = bg_kala, border_width = 1),
-                widget.Wlan(interface='wlp2s0',format='{essid}{percent:2.0%}'),
+                widget.Net(prefix = 'k', format = fa.icons['arrow-down']+"{down}/s", update_interval = 1, foreground = volt),
+                widget.Memory(foreground=volt,format='RAM '+'{MemUsed: .0f}{mm}'),
+                widget.CPU(update_interval=1,foreground=volt),
                 widget.Spacer(),
-                widget.BatteryIcon(theme_path='/home/muzo/.config/qtile/icons/battery-icons',update_interval=2),
-                widget.CurrentLayoutIcon(
-                    custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")],
-                    foreground = fg_kala,
-                    background = bg_kala,
-                    scale = 0.7,
-                    padding = 5
-                ),
+               # widget.BatteryIcon(theme_path='/home/muzo/.config/qtile/icons/battery-icons',update_interval=2),
+               # widget.CurrentLayoutIcon(
+               #     custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")],
+               #     foreground = fg_kala,
+               #     background = bg_kala,
+               #     scale = 0.7,
+               #     padding = 5
+               # ),
                 widget.Systray(),
                 widget.Clock(format="%a %H:%M", foreground = volt),
                 
             ],
             size=30, 
-            opacity=0.7,
+            opacity=0.65,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color= "ceff00" #["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
