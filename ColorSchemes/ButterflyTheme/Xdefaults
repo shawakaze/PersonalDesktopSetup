@@ -1,0 +1,111 @@
+!-------------------------------------------------------------------
+!			 urxvt fonts
+!-------------------------------------------------------------------
+  
+Xft*dpi:                96
+Xft*antialias:          true
+Xft*hinting:            full
+
+!urxvt.font: xft:Hack:pixelsize=12 
+!*.font: xft:Iosevka Nerd Font Mono:pixelsize=15
+!*.font: xft:ProFont for Powerline:pixelsize=16
+urxvt.font: xft:ShureTechMono Nerd Font Mono:pixelsize=18
+!urxvt.font: xft:Monaco:pixelsize=12
+!*font: xft:Ubuntu Mono derivative Powerline:pixelsize=15
+
+!--------------------------------------------------------------
+!		Scrollbar or the lack of it
+!--------------------------------------------------------------
+
+urxvt*scrollBar: false
+urxvt*scrollBar_right:  false
+urxvt*scrollstyle:	rxvt     
+urxvt*saveLines: 1000
+urxvt*scrollTtyOutput:      false
+urxvt*scrollWithBuffer:     true
+urxvt*scrollTtyKeypress:    true
+
+
+!-----------------------------------------------------------------
+!		 Settings for perl extensions ;  see man urxvtperl
+!-----------------------------------------------------------------
+urxvt*perl-lib: /usr/lib/urxvt/perl
+urxvt*perl-ext: default
+urxvt*perl-ext-common: default,clipboard
+urxvt*url-launcher: firefox
+
+!Disables the insanely annoying Ctrl+Shift shortcut that enters ISO14755 mode
+urxvt.iso14755:    false
+urxvt.iso14755_52: false
+
+!----------------------------------------------------------------------------------
+! 			Colors and transparency
+!-----------------------------------------------------------------------------------
+!!   Dont do this: impossible to actually use (only if true, composite, tranparancy)
+!    *shading should be set to ||  0 is basically black, 99 is full transparency on the dark side
+!	    200 is basically white, 101 is full transparency on the light side 
+!-------------------------------------------------------------------------------------
+
+urxvt.depth:	32
+urxvt.buffered: on
+urxvt.transparent: true
+urxvt.dynamicColors: on
+urxvt.shading:	30
+urxvt.fading:	40 
+urxvt.fadeColor: #1c1b1a
+!urxvt.tintColor:	#1c1b1a
+urxvt.blurRadius:	10
+
+urxvt.inheritPixmap:	true
+urxvt.borderLess:       false
+urxvt.borderColor:      black
+urxvt.underlineColor:   #fade3e
+urxvt.pointerColor:     red
+urxvt.highlightColor: #1c1b1a
+
+! Insert color theme after here
+
+!
+! Generated with :
+! XRDB2Xreources.py
+!
+urxvt.foreground:  #e1e1e1
+urxvt.background:  #141e43
+urxvt.cursorColor: #43d58e
+!
+! Black
+urxvt.color0:      #000000
+urxvt.color8:      #3f5648
+!
+! Red
+urxvt.color1:      #ff4242
+urxvt.color9:      #ff3242
+!
+! Green
+urxvt.color2:      #74af68
+urxvt.color10:     #74cd68
+!
+! Yellow
+urxvt.color3:      #ffad29
+urxvt.color11:     #ffb929
+!
+! Blue
+urxvt.color4:      #338f86
+urxvt.color12:     #23d7d7
+!
+! Magenta
+urxvt.color5:      #9414e6
+urxvt.color13:     #ff37ff
+!
+! Cyan
+urxvt.color6:      #23d7d7
+urxvt.color14:     #00ede1
+!
+! White
+urxvt.color7:      #e2e2e2
+urxvt.color15:     #ffffff
+!
+! Bold, Italic, Underline
+urxvt.colorBD:     #67a672
+!urxvt.colorIT:
+!urxvt.colorUL:
